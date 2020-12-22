@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        .premiereDiv{
+               /* border-style:dotted;
+                border-width:5px;
+                border-color:blue;*/
+                border:5px double red;/*meme chose en  resumer*/
+                border-radius: 25px;
+                padding:20px;/*marge interne*/
+                margin-bottom:15px;/*marge externe en bas*/
+        }
+        .deuxiemeDiv{
+            border:5px double green;/*meme chose en  resumer*/
+                border-radius: 25px;
+                padding:20px;/*marge interne*/
+        }
+        /*au passage de la souris*/
+        .premiereDiv:hover{
+            background-color:salmon;
+        }
+        .deuxiemeDiv:hover{
+            background-color: #23c099;
+        }
+        h1{ 
+            text-align:center;
+            font-size:150%;
+            border:1px solid gray;
+            width:50%;
+            border-radius: 25px;
+            background-color:lightslategray;
+            color:white;
+            text-transform: uppercase;
+            font-family:  'Times New Roman';
+
+        }
+        p{
+            text-align:justify;
+            border:1px solid gray;  
+            padding:5px;
+            text-indent: 20px;
+        }
+        img{
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <!--commentaire:exemple de div avec css-->
+    <div class="premiereDiv">
+        <h1>Titre</h1>
+        <p>Lorem ipsum dolor sit amet 
+            consectetur adipisicing elit. 
+            Cum aspernatur est consequuntur excepturi. Ullam aspernatur non tenetur harum enim. Animi laborum alias fugiat
+             numquam aliquid placeat officiis. At, omnis esse!</p>
+    </div>
+    
+    <div class="deuxiemeDiv">
+        <h1>Titre</h1>
+        <img src="images/box_bg.gif" 
+        alt="text alternative" title="logo"/>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Deleniti molestiae delectus, earum voluptatibus nemo,
+             odio aut corporis cum debitis repellat porro ut, 
+            numquam beatae provident quo quod dolorem. Libero, eaque?</p>
+    </div>
+</body>
+</html>

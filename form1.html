@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <meta charset='utf-8'>
+     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+     <title>Page Title</title>
+     <meta name='viewport' content='width=device-width, initial-scale=1'>
+     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+     <script src='main.js'></script>
+ </head>
+ <body>
+     <h1>Formulaire</h1>
+     
+     <form action="page.traitment" method="">
+         <fieldset>
+           <legend>Inscription au club de sport </legend>
+
+
+            <label for="nom1">donner votre nom :</label>
+
+            <input type="text" id="nom1"/>
+            <br/>   
+            <label for="age1">donner votre age :</label>
+
+            <input type="text" id="age1"/>
+            <br/>
+           
+         </fieldset>
+         <fieldset>
+            <legend>Information sur les sport prefere  </legend>
+         <label>choisier le sport :</label>
+        <input type="radio" name="grp1"/>football
+        <input type="radio" name="grp1"/>tennis
+        <input type="radio" name="grp1" />basketball
+        </fieldset>
+        <fieldset>
+            <legend>activer/desactiver  </legend>
+         <label>voulez vous que vous soyez contacter chaque semaine :</label>
+        <input type="radio" name="grp2"/>oui
+        <input type="radio" name="grp2"/>non
+         
+        </fieldset>
+        <fieldset>
+            <legend>Pays </legend>
+         <label>choisir votre pays :</label>
+        <select>
+            <option value="0">selectionner</option>
+             <option value="1">Maroc</option>
+             <option value="2">Tunisie</option>
+             <option value="3">algerie</option>
+             <option value="4">Mauritanie</option>
+             
+        </select>
+        </fieldset>
+        <input type="submit"/>
+        <input type="reset" />
+     </form>
+ </body>
+ </html>
