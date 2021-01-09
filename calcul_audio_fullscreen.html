@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+     <script>
+          
+ </script>
+    <style>
+        .lignenumeber{clear:both;width:20%; }
+        .number{ width:15%;height:auto;padding:5px;font-size:120%;
+        text-align: center;color:white;font-weight:bold;
+        background-color:rgb(57, 47, 109);margin:2px;
+        float:left;border:1px solid yellow;
+        transition: all 700ms ease-out;}
+        .number:hover{
+            border:2px solid rgb(15, 27, 83);
+            width:13%;
+            color:black;
+            
+            background:linear-gradient(red, orange, yellow, green, blue);
+        }
+        #res{width:19%;background-color: gray;color:white;}
+    </style>
+     
+</head>
+<body>
+    <form action="gt" onsubmit="fo(event)">
+  <div>
+    <label for="fname">First name: </label>
+    <input id="fname" type="text">
+  </div>
+  <div>
+    <label for="lname">Last name: </label>
+    <input id="lname" type="text">
+  </div>
+  <div>
+     <input id="submit" type="submit">
+  </div>
+</form>
+<p></p>
+
+    ---
+    <label>calcul</label><input type="text" id="res"/>
+    <div class="lignenumeber">
+        <div class="number">1</div>
+        <div class="number">2</div>
+        <div class="number">3</div>
+    </div>
+    <div class="lignenumeber">
+        <div class="number">4</div>
+        <div class="number">5</div>
+        <div class="number">6</div>
+    </div>
+    <div class="lignenumeber">
+        <div class="number">7</div>
+        <div class="number">8</div>
+        <div class="number">9</div>
+    </div>
+    <div class="lignenumeber">
+        <div class="number">0</div>
+        <div class="number">=</div>
+        <div class="number">C</div>
+    </div>
+    <input type="button" value="plein ecran" id="pl" />
+    <script>
+        function fo(e){
+            e.preventDefault();
+        }
+document.onfullscreenchange = function ( event ) {
+  console.log("FULL SCREEN CHANGE"+event)
+};
+document.documentElement.onclick = function () {
+  // requestFullscreen() must be in an event handler or it will fail
+  //document.documentElement.requestFullscreen();
+}
+       var T=document.querySelectorAll(".number");
+       T.forEach(x => {
+           var y=x;
+           x.addEventListener("click",(y)=>{
+        var r=document.querySelector("#res");
+        r.value+=x.innerText;
+        var nomAudio="";
+        if(parseInt(x.innerText)==1){
+            nomAudio="audio/1.mp3";
+        }else{
+            nomAudio="audio/d.wav";
+        }
+        var snd = new Audio(nomAudio);
+        snd.play();
+        snd.currentSrc=2;
+        console.log(x);
+       })
+       });
+       
+       
+    </script>
+
+     
+</body>
+</html>

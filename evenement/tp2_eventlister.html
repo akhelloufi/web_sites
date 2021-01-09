@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>s</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        span{
+            color:red;
+            font-size:200%;
+
+        }
+        span:hover{
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+   
+       function ecrire(e){
+           var ch=String.fromCharCode(e.keyCode);
+           var d1=document.getElementById("d1");
+           d1.innerHTML += "<span>"+ch+"</span>";
+       }
+        </script>
+</head>
+<body>
+    
+  <label>zone de texte</label> 
+   <input type="text" onkeyup="ecrire(event)" />
+<div id="d1"></div>
+<label for="TxtSaisie1">Champ à saisir : </label>
+<input id="t1" type="text" style="width:100px; border:solid 1px black;"
+   onblur="this.style.backgroundColor='white';"
+   onfocus="this.style.backgroundColor='yellow';" />
+
+   <hr/>
+   <label for="TxtSaisie">Valeur à saisir : </label>
+<input id="TxtSaisie" type="text" style="width:120px; border:solid 1px black;"
+   onchange="alert('valeur différente'+this.value);" />
+<div></div>
+<label for="LstSaisie">Valeur à saisir : </label>
+<select id="LstSaisie" style="width:120px;"
+ onchange="alert('valeur différente'+this.selectedIndex);">
+   <option>Valeur 1</option>
+   <option>Valeur 2</option>
+   <option>Valeur 3</option>
+</select>
+<script>
+
+</script>
+
+</body>
+</html>

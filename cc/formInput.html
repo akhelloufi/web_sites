@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>form input</title>
+<style>
+   form{background-color:#00ff00;
+        margin-bottom: 10px;
+   }
+</style>
+<script>
+     
+</script>
+</head>
+<body> 
+    
+  <form action="/seracher"  method="get" enctype="multipart/form-data"> 
+<input type="hidden" name="secret1" value="phrase secrete"/>
+<input type="hidden" name="site_precedent" value="123456578892"/>
+   <fieldset>
+       <legend>inscription</legend>
+       <label for="d1">donner le nom</label>
+       <input type="text" id="d1"
+        name="x" value="hicham"
+       placeholder="donner nom "
+       />
+       <br />
+       <label for="e1">donner l email</label>
+       <input type="email" id="e1" name="em"
+       placeholder="donner email "
+       />
+       <br />
+       <label for="c1">commentaire</label>
+        <textarea cols="25" rows="4"  readonly="readonly" >
+            TEXT CONTENU
+        </textarea>
+        <br />
+        <label >chosir le fruit</label>
+        <input type="radio" name="gr1" value="pomme" />pomme
+        <input type="radio" name="gr1" value="banane" /> banane
+        <input type="radio" name="gr1" value="banane" />fraise
+
+        <br />
+        <label>fruit a partir de liste</label>
+        <select name="s1"  >
+            <option value="0">selectionner fruit</option>
+            <optgroup label="list1">
+                <option value="1">pomme</option>
+                <option value="2" >banane</option>
+                <option value="3" selected="selected">fraise</option>
+            </optgroup>
+            <optgroup label="list2">
+                <option value="4">datte</option>
+                <option value="5">fruit desert</option>
+            </optgroup>
+        </select>
+        <br />
+        <label>fichier (photo png ,jpg, cv pdf....)</label>
+        <input type="file" name="f"/>
+        <br />
+        <label>password</label>
+        <input  type="password" maxlength="3"/>
+   </fieldset>
+   
+    <input type="submit" />
+    <input type="reset" />
+  </form>
+  <input type="button" value="click!" onclick="alert('salam');"/>
+  <input type="color" value="#0000ce"/>
+
+</body>
+</html>

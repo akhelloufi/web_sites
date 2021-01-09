@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        *{margin:0px;
+        padding:0px;
+        }
+    </style>
+    <script type="text/javascript">
+       var TpsDebut = (new Date()).getTime();//milisisseconde
+        
+        function CalculTempsChargement()
+        {
+           //var TpsFin = (new Date()).getTime();//miliseonde
+          //var  TpsDuree = (TpsFin - TpsDebut) / 1000;//en seconde
+           var d1=document.getElementById("d1");
+           d1.innerHTML = "date system"+new Date().getTime();
+        }
+
+        function afficher(e){
+            var d1=document.getElementById("d1");
+           d1.innerHTML = e;
+           console.log(e)
+        }
+        function moveAfficher(e){
+            var d1=document.getElementById("d1");
+            var x=e.clientX;//coordonne de la sourie
+            var y=e.clientY;
+
+           d1.innerHTML="sourie en movement x="+x+" y="+y;
+           var c = document.getElementById("c1");
+            var ctx = c.getContext("2d");
+            /*ctx.moveTo(x,y);
+            ctx.lineTo(x+5,y+5);*/
+            ctx.beginPath();
+            ctx.arc(x, y, 10, 0, 2 * Math.PI);
+
+            ctx.stroke();
+        }
+     </script>
+     
+</head>
+<body onload="CalculTempsChargement()" onmousemove="moveAfficher(event)"
+onselect="alert('interdit de selection text dans body');"  onscroll="console.log('scroll');"
+style="border:1px solid red;height:320px;"
+>
+    <div id="d1">salut</div>
+    <input type="text" onselect="afficher(event)" />
+    <canvas id="c1" width="500" height="500" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+        
+         
+</body>
+</html>
